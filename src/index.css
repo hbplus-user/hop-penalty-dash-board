@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at 15% -10%, #182236 0%, #0a0e14 50%, #05060a 100%);
+  color: #f4f6fa;
+  font-family: 'Manrope', sans-serif;
+}
+
+a {
+  color: #5eead4;
+}
+
+a:hover {
+  color: #99f6e4;
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.3);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+select,
+textarea,
+input {
+  font-family: 'Manrope', sans-serif;
+}
+
+.hop-app {
+  animation: fadeUp 0.6s ease both;
+}
+
+.hop-nav-btn {
+  transition: background 0.15s, color 0.15s;
+}
+
+.hop-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.hop-delete-btn {
+  transition: color 0.15s;
+}
+
+.hop-delete-btn:hover {
+  color: #f87171;
+}
+
+.hop-card-clickable {
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.hop-card-clickable:hover {
+  border-color: rgba(94, 234, 212, 0.35);
+  box-shadow: 0 24px 46px -22px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 0 0 1px rgba(94, 234, 212, 0.15);
+}
+
+.hop-card-clickable:focus-visible {
+  outline: 2px solid #5eead4;
+  outline-offset: 2px;
+}
